@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="contact-list">
+    <app-contact
+      *ngFor="let contact of contacts$ | async"
+      [contact]="contact"
+      [routerLink]="['/contact-detail', contact.id]"      
+    ></app-contact>
+  </div>
+</div>
